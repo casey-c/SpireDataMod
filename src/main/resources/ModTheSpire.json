@@ -1,0 +1,10 @@
+{
+  "modid": "ojb_spiredatamod",
+  "name": "SpireData Mod",
+  "author_list": ["ojb"],
+  "description": "Companion mod for SpireData. Uploads run information as a formatted JSON to a Github Gist, for use in the SpireData website.",
+  "version": "0.0.1",
+  "sts_version": "12-22-2020",
+  "mts_version": "3.18.2",
+  "dependencies": ["basemod"]
+}
