@@ -83,4 +83,20 @@ public class GistHelper {
             return constructNewGist(credentials, service);
         }
     }
+
+    public void updateContent(String content) {
+        System.out.println("SpireData: attempting to update gist.");
+
+        if (gist != null && gist.getFiles() != null && gist.getFiles().containsKey(dataFilename)) {
+            GistFile file = gist.getFiles().get(dataFilename);
+            file.setContent(content);
+
+            try {
+                service.updateGist(gist);
+                System.out.println("SpireData: successfully updated gist.");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }

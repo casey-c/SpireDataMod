@@ -1,6 +1,7 @@
 package SpireDataMod;
 
 import SpireDataMod.credentials.Credentials;
+import SpireDataMod.data.DataManager;
 import SpireDataMod.gist.GistHelper;
 import basemod.BaseMod;
 import basemod.interfaces.PostInitializeSubscriber;
@@ -32,6 +33,7 @@ public class SpireDataMod implements PostInitializeSubscriber {
             }
             else {
                 System.out.println("gistHelper is working :-)");
+                DataManager.writeToGist(gistHelper);
             }
         }
         else {
