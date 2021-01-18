@@ -10,11 +10,10 @@ public class DataManager {
     }
 
     public static void writeToGist(GistHelper gistHelper) {
-        // TODO: other stuff instead
+        RunDatabase runDatabase = RunDatabase.loadRuns();
 
-        Run r = Run.buildFromFile("runs/1610664640.run", "DEFECT");
-        r.printPretty();
-
-        //gistHelper.updateContent(getContent());
+        System.out.println("------------------");
+        System.out.println(runDatabase.getAsJsonString());
+        System.out.println("------------------");
     }
 }
